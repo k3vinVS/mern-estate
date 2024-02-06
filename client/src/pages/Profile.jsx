@@ -33,6 +33,7 @@ const Profile = () => {
   const [userListings, setUserListings] = useState([]);
   const dispatch = useDispatch();
 
+  // console.log(currentUser);
   // ----- firebase storage -----
   // allow read;
   // allow write: if
@@ -263,7 +264,7 @@ const Profile = () => {
               key={listing.id}
               className="border rounded-lg p-3 flex justify-between items-center gap-4"
             >
-              <Link to={`/listings/${listing._id}`}>
+              <Link to={`/listing/${listing._id}`}>
                 <img
                   src={listing.imageUrls[0]}
                   alt="listing cover"
@@ -272,7 +273,7 @@ const Profile = () => {
               </Link>
               <Link
                 className="text-slate-700 font-semibold hover:underline truncate flex-1"
-                to={`/listings/${listing._id}`}
+                to={`/listing/${listing._id}`}
               >
                 <p>{listing.name}</p>
               </Link>
